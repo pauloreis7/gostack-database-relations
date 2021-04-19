@@ -56,7 +56,7 @@ class ProductsRepository implements IProductsRepository {
         productToUpdate => productToUpdate.id === product.id,
       );
 
-      productsToUpdate[ProductToUpdateIndex].quantity = product.quantity;
+      productsToUpdate[ProductToUpdateIndex].quantity -= product.quantity;
 
       return productsToUpdate[ProductToUpdateIndex];
     });
